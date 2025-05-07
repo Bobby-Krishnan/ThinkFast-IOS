@@ -8,8 +8,10 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .padding(.top, 20)
             
-            ThinkFastWebView(url: URL(string: "https://thinkfast-df319.web.app/")!)
-                .edgesIgnoringSafeArea(.all)
+            ZStack {
+                ThinkFastWebView(url: URL(string: "https://thinkfast-df319.web.app/")!)
+            }
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
