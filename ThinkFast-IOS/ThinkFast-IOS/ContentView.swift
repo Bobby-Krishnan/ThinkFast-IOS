@@ -1,24 +1,24 @@
-//
-//  ContentView.swift
-//  ThinkFast-IOS
-//
-//  Created by Bobby Krishnan on 5/7/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("ThinkFast")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.top, 20)
+            
+            ThinkFastWebView(url: URL(string: "https://thinkfast-df319.web.app/")!)
+                .edgesIgnoringSafeArea(.all)
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+@main
+struct ThinkFast_IOSApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
 }
